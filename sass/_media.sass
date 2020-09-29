@@ -1,0 +1,50 @@
+@media (min-width: 993px)
+  .header
+    &-list
+      &__item
+        &:hover
+          color: $body
+        &:hover > ul
+          visibility: visible
+          opacity: 1
+      &__dropdown
+        &:hover > svg
+          fill: $body
+    &-button
+      &:hover
+        color: $body
+        border-color: $body
+  .dropdown
+    &-list
+      &__item
+        &:hover
+          font-weight: 600
+          color: $blue
+        &:hover > ul
+          visibility: visible
+          opacity: 1
+        &:hover > svg
+          fill: $blue
+  .services
+    &-list
+      &__item
+        &:hover
+          font-weight: 600
+          color: $blue
+  .hero
+    &-git
+      &:hover
+        color: $body
+      &:hover > svg
+        fill: $body
+    &-button
+      &:hover
+        border-color: $body
+        color: $body
+      &:hover > svg
+        fill: $body
+    &-explore
+      &:hover
+        color: $body
+      &:hover > svg
+        fill: $body

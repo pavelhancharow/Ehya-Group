@@ -15,30 +15,71 @@
   <header class="header">
     <div class="container">
       <div class="header-wrapper">
-        <a href="#" class="header-logo"><img src="img/header-logo.svg" alt="image: logo"></a>
+        <a href="index.html" class="header-logo"><img src="img/svg/header-logo.svg" alt="image: logo"></a>
         <ul class="header-list">
           <li class="header-list__item"><a href="#" class="header-list__link">Home</a></li>
-          <li class="header-list__item"><a href="#" class="header-list__link">Landings</a></li>
-          <li class="header-list__item">
-            <a href="#" class="header-list__link">Pages</a>
-            <ul class="pages-list">
-              <li class="pages-list__item">Company</li>
-              <li class="pages-list__item">Career</li>
-              <li class="pages-list__item">Blog</li>
-              <li class="pages-list__item">
+          <li class="header-list__item header-list__dropdown">
+            Landings
+            <svg class="header-list__item_icon">
+              <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+            </svg>
+          </li>
+          <li class="header-list__item header-list__dropdown">
+            Pages
+            <svg class="header-list__item_icon">
+              <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+            </svg>
+            <ul class="dropdown-list">
+              <li class="dropdown-list__item">
+                Company
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+              </li>
+              <li class="dropdown-list__item">
+                Career
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+              </li>
+              <li class="dropdown-list__item">
+                Blog
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+              </li>
+              <li class="dropdown-list__item">
                 Utility - Sign in
-                <ul class="signIn-list">
-                  <li class="signIn-list__item"><a href="#" class="signIn-list__link">Basic</a></li>
-                  <li class="signIn-list__item"><a href="#" class="signIn-list__link">Right Cover</a></li>
-                  <li class="signIn-list__item"><a href="#" class="signIn-list__link">Left Cover</a></li>
-                  <li class="signIn-list__item"><a href="#" class="signIn-list__link">Modal</a></li>
-                  <li class="signIn-list__item"><a href="#" class="signIn-list__link">Modal with Image</a></li>
-                  <li class="signIn-list__item"><a href="#" class="signIn-list__link">Illustration</a></li>
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+                <ul class="services-list">
+                  <li class="services-list__item"><a href="#" class="services-list__link">Basic</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Right Cover</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Left Cover</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Modal</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Modal with Image</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Illustration</a></li>
                 </ul>
               </li>
-              <li class="pages-list__item">Utility - Sign up</li>
-              <li class="pages-list__item">Utility - Password Reset</li>
-              <li class="pages-list__item">Utility - Error 404</li>
+              <li class="dropdown-list__item">
+                Utility - Sign up
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+              </li>
+              <li class="dropdown-list__item">
+                Utility - Password Reset
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+              </li>
+              <li class="dropdown-list__item">
+                Utility - Error 404
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+              </li>
             </ul>
           </li>
           <li class="header-list__item"><a href="#" class="header-list__link">Docs</a></li>
@@ -47,6 +88,71 @@
         <a href="#" class="header-button">Get it now</a>
       </div>
       <!-- /.header-wrapper -->
+      <div class="hero-wrapper">
+        <div class="hero-info">
+          <h1 class="hero-info__title">Awesome & powerfull landing for your software library</h1>
+          <p class="hero-info__subtitle">An awesome & powefull JavaScript library for building user interfaces</p>
+          <div class="hero-buttons">
+            <a href="#" class="button-social hero-git">
+              <svg class="button-social__img">
+                <use xlink:href="img/svg/socials.svg#github"></use>
+              </svg>
+              View on Github
+            </a>
+            <a href="#" class="button-more hero-button">
+              Documentation
+              <svg class="hero-button__img arrow-right">
+                <use xlink:href="img/svg/pointers.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+          <!-- /.hero-buttons -->
+          <span class="hero-description">
+            Zip-archive with production version, all sources and addons.
+          </span>
+          <!-- /.hero-description -->
+        </div>
+        <!-- /.hero-info -->
+        <div class="hero-cards">
+          <div class="hero-card hero-card__first">
+            <img src="img/svg/rocket.svg" alt="icon: rocket" class="hero-card__img card-icon">
+            <div class="hero-card__info">
+              <strong class="hero-card__title">Super Architecture</strong>
+              <span class="hero-card__subtitle">Modular, realiable, OOP, simple fast, for scalable client-side
+                code.</span>
+            </div>
+          </div>
+          <div class="hero-card hero-card__second">
+            <img src="img/svg/workflow.svg" alt="icon: workflow" class="hero-card__img card-icon">
+            <div class="hero-card__info">
+              <strong class="hero-card__title">No Dependencies</strong>
+              <span class="hero-card__subtitle">Independent of any third-party libraries or frameworks.</span>
+            </div>
+          </div>
+          <div class="hero-card hero-card__third">
+            <img src="img/svg/opened-file.svg" alt="icon: opened-file" class="hero-card__img card-icon">
+            <div class="hero-card__info">
+              <strong class="hero-card__title">Well Documented</strong>
+              <span class="hero-card__subtitle">Each component and module has descriptions and API.</span>
+            </div>
+          </div>
+          <div class="hero-card hero-card__fourth">
+            <img src="img/svg/like.svg" alt="icon: like" class="hero-card__img card-icon">
+            <div class="hero-card__info">
+              <strong class="hero-card__title">Real Life Tested</strong>
+              <span class="hero-card__subtitle">We use it in our work. On this site too for the front and admin.</span>
+            </div>
+          </div>
+        </div>
+        <!-- /.hero-cards -->
+      </div>
+      <!-- /.hero-wrapper -->
+      <a href="#" class="hero-explore">
+        Explore all features
+        <svg class="hero-explore__img arrow-more">
+          <use xlink:href="img/svg/pointers.svg#arrow-right"></use>
+        </svg>
+      </a>
     </div>
     <!-- /.container -->
   </header>
