@@ -9,13 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="container">
       <div class="header-wrapper">
-        <a href="index.html" class="header-logo"><img src="img/svg/header-logo.svg" alt="image: logo"></a>
+        <a href="index.html" class="header-logo">
+          <img src="img/svg/header-logo.svg" alt="image: logo" class="header-logo__img">
+        </a>
         <ul class="header-list">
           <li class="header-list__item"><a href="#" class="header-list__link">Home</a></li>
           <li class="header-list__item header-list__dropdown">
@@ -23,6 +26,26 @@
             <svg class="header-list__item_icon">
               <use xlink:href="img/svg/pointers.svg#angle-down"></use>
             </svg>
+            <ul class="dropdown-list">
+              <li class="dropdown-list__item">
+                Services
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+                <ul class="services-list">
+                  <li class="services-list__item"><a href="#" class="services-list__link">Software Library</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Insurance</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Converence</a></li>
+                  <li class="services-list__item"><a href="#" class="services-list__link">Rental</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-list__item">
+                Products
+                <svg class="dropdown-list__item_icon">
+                  <use xlink:href="img/svg/pointers.svg#angle-right"></use>
+                </svg>
+              </li>
+            </ul>
           </li>
           <li class="header-list__item header-list__dropdown">
             Pages
@@ -53,7 +76,7 @@
                 <svg class="dropdown-list__item_icon">
                   <use xlink:href="img/svg/pointers.svg#angle-right"></use>
                 </svg>
-                <ul class="services-list">
+                <ul class="services-list services-responsive">
                   <li class="services-list__item"><a href="#" class="services-list__link">Basic</a></li>
                   <li class="services-list__item"><a href="#" class="services-list__link">Right Cover</a></li>
                   <li class="services-list__item"><a href="#" class="services-list__link">Left Cover</a></li>
@@ -86,8 +109,116 @@
           <li class="header-list__item"><a href="#" class="header-list__link">Help</a></li>
         </ul>
         <a href="#" class="header-button">Get it now</a>
+        <div class="menu">
+          <div class="menu-toggle">
+            <div class="hamburger">
+              <span class="hamburger-span span"></span>
+              <span class="hamburger-span span"></span>
+              <span class="hamburger-span span"></span>
+            </div>
+            <div class="cross">
+              <span class="cross-span span"></span>
+              <span class="cross-span span"></span>
+            </div>
+          </div>
+          <!-- /.menu-toggle -->
+          <ul class="menu-list">
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Home</a></li>
+            <li class="menu-list__item menu-list__dropdown menu-list__landings">
+              <span>Landings</span>
+              <svg class="menu-list__item_icon">
+                <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+              </svg>
+              <ul class="drop-list">
+                <li class="drop-list__item drop-list__services">
+                  <span>Services</span>
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                  <ul class="service-list">
+                    <li class="service-list__item"><a href="#" class="service-list__link">Software Library</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Insurance</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Converence</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Rental</a></li>
+                  </ul>
+                </li>
+                <li class="drop-list__item">
+                  Products
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-list__item menu-list__dropdown menu-list__pages">
+              <span>Pages</span>
+              <svg class="menu-list__item_icon">
+                <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+              </svg>
+              <ul class="drop-list">
+                <li class="drop-list__item">
+                  Company
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                </li>
+                <li class="drop-list__item">
+                  Career
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                </li>
+                <li class="drop-list__item">
+                  Blog
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                </li>
+                <li class="drop-list__item drop-list__signIn">
+                  <span>Utility - Sign in</span>
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                  <ul class="service-list">
+                    <li class="service-list__item"><a href="#" class="service-list__link">Basic</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Right Cover</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Left Cover</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Modal</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Modal with Image</a></li>
+                    <li class="service-list__item"><a href="#" class="service-list__link">Illustration</a></li>
+                  </ul>
+                </li>
+                <li class="drop-list__item">
+                  Utility - Sign up
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                </li>
+                <li class="drop-list__item">
+                  Utility - Password Reset
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                </li>
+                <li class="drop-list__item">
+                  Utility - Error 404
+                  <svg class="drop-list__item_icon">
+                    <use xlink:href="img/svg/pointers.svg#angle-down"></use>
+                  </svg>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Docs</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Help</a></li>
+            <li class="menu-list__item menu-button"><a href="#" class="menu-button__link">Get it now</a></li>
+          </ul>
+        </div>
       </div>
       <!-- /.header-wrapper -->
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
       <div class="hero-wrapper">
         <div class="hero-info">
           <h1 class="hero-info__title">Awesome & powerfull landing for your software library</h1>
@@ -155,7 +286,7 @@
       </a>
     </div>
     <!-- /.container -->
-  </header>
+  </section>
 </body>
 
 </html>
