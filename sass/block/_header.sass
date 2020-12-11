@@ -21,7 +21,6 @@
     margin-left: auto
     margin-right: 40px
     &__item
-      position: relative
       transition: all .3s
       &:not(:last-of-type)
         margin-right: 40px
@@ -132,7 +131,7 @@
     top: 0
     right: 0
     display: flex
-    padding: 36px 24px 26px 24px
+    padding: 36px 0 26px 24px
     width: 304px
     flex-direction: column
     box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.16)
@@ -142,7 +141,11 @@
     opacity: 0
     transition: all .25s ease-in-out
     transition-delay: .25s
-    overflow-y: auto
+    overflow: hidden
+    &__hidden
+      padding-right: 24px
+      max-height: 80vh
+      overflow-y: auto
     &__item
       color: $body
       line-height: 22px
@@ -159,12 +162,6 @@
       align-items: center
       justify-content: space-between
       flex-wrap: wrap
-    &__landings
-      &_active > .drop-list
-        display: flex
-    &__pages
-      &_active > .drop-list
-        display: flex
     &__link
       color: inherit
   &-button
@@ -211,6 +208,7 @@
   transform: rotate(45deg)
   transition: all .25s ease-in-out
   z-index: 10
+  visibility: hidden
   &-span
     background-color: $body
     transition: all .25s ease-in-out
@@ -240,6 +238,8 @@
     transition-delay: .125s
   &:nth-child(3)
     transition-delay: .25s
+.menu-toggle__open > .cross
+  visibility: visible
 .menu-toggle__open > .cross > .cross-span
   &:nth-child(1)
     height: 22px
@@ -254,6 +254,10 @@
     flex-basis: 100%
     padding-left: 8px
     margin-top: 16px
+    color: $body
+    font-weight: 400
+    &__active
+      display: flex
     &__item
       &:not(:last-of-type)
         margin-bottom: 16px
@@ -266,6 +270,10 @@
     padding-left: 12px
     flex-basis: 100%
     margin-top: 20px
+    color: $body
+    font-weight: 400
+    &__active
+      display: flex
     &__item
       display: flex
       align-items: center
@@ -278,9 +286,3 @@
         width: 9px
         height: 16px
         fill: $body
-    &__signIn
-      &_active > .service-list
-        display: flex
-    &__services
-      &_active > .service-list
-        display: flex
