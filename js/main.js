@@ -82,12 +82,19 @@ window.addEventListener('DOMContentLoaded', () => {
       modalForm = modal.querySelector('.modal-form'),
       closeModal = modal.querySelector('[data-close]'),
       openModal = document.querySelector('[data-open]'),
-      email = document.getElementById('singUp-email');
+      inputs = modalForm.querySelectorAll('[data-input]');
 
     function modalClose() {
       modal.style.display = '';
       document.body.style.overflow = '';
-      inputValid(email, email.parentElement);
+      inputs.forEach(item => {
+        if (item.id === 'singUp-checked') {
+          checked(item);
+        } else {
+          inputValid(item, item.parentElement);
+        }
+      });
+
       modalForm.reset();
     }
 
@@ -126,8 +133,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function unchecked(selector) {
+    selector.nextElementSibling.classList.add('modal-form__label_error');
+    selector.nextElementSibling.textContent = 'Do you agree to the terms & conditions?';
+  }
+
+  function checked(selector) {
+    selector.nextElementSibling.classList.remove('modal-form__label_error');
+    selector.nextElementSibling.textContent = 'Agree to terms & conditions';
+  }
+
   const validation = () => {
-    const enterInputs = document.querySelectorAll('.modal-form__input');
+    const enterInputs = document.querySelectorAll('[data-input]');
 
     function validateEmail(input, label) {
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -141,17 +158,23 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const email = document.querySelector('#singUp-email');
-    email.addEventListener('change', () => validateEmail(email, email.parentElement));
+    enterInputs.forEach(item => item.addEventListener('change', () => {
+      item.value = item.value.trim();
+      if (item.id === 'singUp-email') {
+        validateEmail(item, item.parentElement);
+      }
+    }));
 
     enterInputs.forEach(item => item.addEventListener('input', () => {
 
       if (item.id === 'singUp-name') {
         item.value = item.value.replace(/[^a-z\s]/ig, '');
+        inputValid(item, item.parentElement);
       } else if (item.id === 'singUp-pass') {
         const reg = /[^\W+]/ig;
         if (reg.test(item.value)) {
           item.value = item.value.replace(/[^\W+]/ig, '*');
+          inputValid(item, item.parentElement);
         } else {
           item.value = item.value.replace(/[^\w]/gi, '');
         }
@@ -164,6 +187,8 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
           item.classList.remove('modal-form__input_valid');
         }
+      } else if (item.id === 'singUp-checked') {
+        checked(item);
       }
 
     }));
@@ -171,4 +196,53 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   validation();
+
+  const sendForm = () => {
+    const form = document.querySelector('.modal-form'),
+      inputs = form.querySelectorAll('[data-input]');
+
+    inputs.forEach(item => item.required = false);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      inputs.forEach((input, i) => {
+        if (input.value === '') {
+          inputError(input, input.parentElement);
+        } else if (i === 3 && !input.checked) {
+          unchecked(input);
+        }
+      });
+
+      if (inputs[0].value === '' || inputs[1].value === '' || inputs[2].value === '' || !inputs[3].checked) {
+        return;
+      }
+
+      const formData = new FormData(form);
+      let object = {};
+      formData.forEach((val, key) => object[key] = val);
+
+      postData(object)
+        .then(resolve => {
+          if (resolve.status !== 200) {
+            throw new Error('status network not 200.');
+          }
+          console.log('ok');
+        })
+        .catch(error => console.warn(error))
+        .finally(() => form.reset());
+    });
+
+    const postData = (object) => {
+      return fetch('./server.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(object)
+      });
+    };
+  };
+
+  sendForm();
 });
