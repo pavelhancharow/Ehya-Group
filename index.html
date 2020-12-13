@@ -215,7 +215,7 @@
               </li>
               <li class="menu-list__item"><a href="#" class="menu-list__link">Docs</a></li>
               <li class="menu-list__item"><a href="#" class="menu-list__link">Help</a></li>
-              <li class="menu-list__item menu-button"><a href="#" class="menu-button__link">Get it now</a></li>
+              <li class="menu-list__item menu-button"><a href="#" class="menu-button__link">Get it now</a>
             </ul>
           </div>
         </div>
@@ -293,6 +293,48 @@
     </div>
     <!-- /.container -->
   </section>
+  <!-- /.hero -->
+  <div class="modal">
+    <div class="modal-content">
+      <svg class="modal-close" data-close>
+        <use xlink:href="img/svg/times.svg#times-solid"></use>
+      </svg>
+      <div class="modal-singUp">
+        <h3 class="modal-singUp__title">Let’s join us</h3>
+        <a href="#" class="modal-singUp__btn">
+          <div class="modal-singUp__icon">
+            <img src="img/svg/bitmap.svg" alt="icon: google" class="modal-singUp__icon_g">
+          </div>
+          <span class="modal-singUp__text">Sign up with Google</span>
+        </a>
+        <span class="modal-singUp__description">Or, sign up with your email</span>
+      </div>
+      <form action="#" class="modal-form">
+        <label for="singUp-name" class="modal-form__label">
+          <span class="modal-form__label_title">Your name*</span>
+          <input type="text" class="modal-form__input" name="name" id="singUp-name" required placeholder="Enter name">
+        </label>
+        <label for="singUp-email" class="modal-form__label">
+          <span class="modal-form__label_title">Email address*</span>
+          <input type="text" class="modal-form__input" name="email" id="singUp-email" required
+            placeholder="Enter email address">
+        </label>
+        <label for="singUp-pass" class="modal-form__label">
+          <span class="modal-form__label_title">Password*</span>
+          <input type="text" class="modal-form__input" name="password" id="singUp-pass" required
+            placeholder="Enter password">
+        </label>
+        <label for="singUp-checked" class="modal-form__label modal-form__checkbox">
+          <input type="checkbox" class="modal-form__checked" name="cheked" id="singUp-checked">
+          <span class="modal-form__label_agree">Agree to terms & conditions</span>
+        </label>
+        <button type="submit" class="modal-form__submit">Sign up</button>
+      </form>
+      <span class="modal-description">Already have an account? <span class="modal-description__bold">Sign in
+          now</span></span>
+    </div>
+  </div>
+  <!-- /.modal -->
 </body>
 
 </html>
