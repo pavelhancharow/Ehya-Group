@@ -312,20 +312,21 @@
       <form action="#" class="modal-form">
         <label for="singUp-name" class="modal-form__label">
           <span class="modal-form__label_title">Your name*</span>
-          <input type="text" class="modal-form__input" name="name" id="singUp-name" required placeholder="Enter name">
+          <input type="text" data-input class="modal-form__input" name="name" id="singUp-name" required
+            placeholder="Enter name">
         </label>
         <label for="singUp-email" class="modal-form__label">
           <span class="modal-form__label_title">Email address*</span>
-          <input type="text" class="modal-form__input" name="email" id="singUp-email" required
+          <input type="text" data-input class="modal-form__input" name="email" id="singUp-email" required
             placeholder="Enter email address">
         </label>
         <label for="singUp-pass" class="modal-form__label">
           <span class="modal-form__label_title">Password*</span>
-          <input type="text" class="modal-form__input" name="password" id="singUp-pass" required
+          <input type="text" data-input class="modal-form__input" name="password" id="singUp-pass" required
             placeholder="Enter password">
         </label>
         <label for="singUp-checked" class="modal-form__label modal-form__checkbox">
-          <input type="checkbox" class="modal-form__checked" name="cheked" id="singUp-checked">
+          <input type="checkbox" data-input class="modal-form__checked" name="cheked" id="singUp-checked">
           <span class="modal-form__label_agree">Agree to terms & conditions</span>
         </label>
         <button type="submit" class="modal-form__submit">Sign up</button>
