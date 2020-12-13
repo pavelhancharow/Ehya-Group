@@ -131,6 +131,10 @@
           background: url("../img/svg/check.svg")
           opacity: 0
           transition: all .5s
+      &_error
+        color: #ff0000
+        &::before
+          box-shadow: inset 0px 1px 3px rgba(255, 0, 0, 0.37)
     &__checkbox
       cursor: pointer
       margin-bottom: 32px
@@ -174,6 +178,7 @@
       font-size: 18px
       line-height: 25px
       cursor: pointer
+      outline: none
   &-description
     font-size: 14px
     font-weight: 600

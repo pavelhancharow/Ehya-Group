@@ -1034,6 +1034,15 @@ body {
   transition: all .5s;
 }
 
+.modal-form__label_error {
+  color: #ff0000;
+}
+
+.modal-form__label_error::before {
+  -webkit-box-shadow: inset 0px 1px 3px rgba(255, 0, 0, 0.37);
+          box-shadow: inset 0px 1px 3px rgba(255, 0, 0, 0.37);
+}
+
 .modal-form__checkbox {
   cursor: pointer;
   margin-bottom: 32px;
@@ -1117,6 +1126,7 @@ body {
   font-size: 18px;
   line-height: 25px;
   cursor: pointer;
+  outline: none;
 }
 
 .modal-description {
