@@ -189,6 +189,26 @@
         line-height: 42px
       &__subtitle
         max-width: 80%
+  .modal
+    padding: 59px 0 48px
+    &-content
+      padding: 38px 44px 36px
+@media (max-width: 530px)
+  .modal
+    padding: 59px 0 48px
+    &-content
+      width: 80%
+      padding: 38px 24px 36px
+    &-singUp
+      &__icon
+        margin-right: 20%
+      &__description
+        &::before
+          left: -30%
+          width: 25%
+        &::after
+          right: -30%
+          width: 25%
 @media (max-width: 500px)
   .hero
     &::after
@@ -220,6 +240,10 @@
         align-items: center
       &__subtitle
         text-align: center
+@media (max-width: 480px)
+  .modal
+    &-content
+      width: 90%
 @media (max-width: 425px)
   .hero
     padding-top: 40px
@@ -254,6 +278,28 @@
       &__item
         &:last-of-type
           margin-bottom: 20px
+  .modal
+    &-content
+      width: 85%
+      font-size: 14px
+    &-singUp
+      &__title
+        font-size: 32px
+        line-height: 44px
+      &__description
+        &::before
+          left: -25%
+          width: 20%
+        &::after
+          right: -25%
+          width: 20%
+    &-form
+      &__input
+        font-size: 14px
+        &::placeholder
+          font-size: 14px
+      &__submit
+        font-size: 16px
 @media (max-width: 375px)
   body
     padding-top: 64px
@@ -299,3 +345,24 @@
       &__subtitle
         font-size: 16px
         line-height: 28px
+  .modal
+    padding: 49px 0 38px
+    &-content
+      width: 87%
+    &-singUp
+      &__title
+        margin-bottom: 28px
+      &__icon
+        margin-right: 15%
+        width: 36px
+        height: 36px
+        padding: 6px
+      &__description
+        &::before
+          left: -15%
+          width: 10%
+        &::after
+          right: -15%
+          width: 10%
+    &-description
+      font-size: 12px
