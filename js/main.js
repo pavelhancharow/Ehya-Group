@@ -77,26 +77,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
   hamburgerMenu();
 
+  function modalClose(modal, inputs, form) {
+    modal.style.display = '';
+    document.body.style.overflow = '';
+    inputs.forEach(item => {
+      if (item.id === 'singUp-checked') {
+        checked(item);
+      } else {
+        inputValid(item, item.parentElement);
+      }
+    });
+    if (form) {
+      form.reset();
+    }
+  }
+
   const popUp = () => {
     const modal = document.querySelector('.modal'),
       modalForm = modal.querySelector('.modal-form'),
       closeModal = modal.querySelector('[data-close]'),
       openModal = document.querySelector('[data-open]'),
       inputs = modalForm.querySelectorAll('[data-input]');
-
-    function modalClose() {
-      modal.style.display = '';
-      document.body.style.overflow = '';
-      inputs.forEach(item => {
-        if (item.id === 'singUp-checked') {
-          checked(item);
-        } else {
-          inputValid(item, item.parentElement);
-        }
-      });
-
-      modalForm.reset();
-    }
 
     function modalOpen(e) {
       e.preventDefault();
@@ -105,9 +106,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     openModal.addEventListener('click', modalOpen);
-    closeModal.addEventListener('click', modalClose);
+    closeModal.addEventListener('click', () => {
+      modalClose(modal, inputs, modalForm);
+    });
 
-    modal.addEventListener('click', (e) => (e.target === modal) ? modalClose() : null);
+    modal.addEventListener('click', (e) => (e.target === modal) ? modalClose(modal, inputs, modalForm) : null);
   };
 
   popUp();
@@ -198,7 +201,8 @@ window.addEventListener('DOMContentLoaded', () => {
   validation();
 
   const sendForm = () => {
-    const form = document.querySelector('.modal-form'),
+    const modal = document.querySelector('.modal'),
+      form = modal.querySelector('.modal-form'),
       inputs = form.querySelectorAll('[data-input]');
 
     inputs.forEach(item => item.required = false);
@@ -230,7 +234,12 @@ window.addEventListener('DOMContentLoaded', () => {
           console.log('ok');
         })
         .catch(error => console.warn(error))
-        .finally(() => form.reset());
+        .finally(() => {
+          form.reset();
+          setTimeout(() => {
+            modalClose(modal, inputs);
+          }, 1500);
+        });
     });
 
     const postData = (object) => {
