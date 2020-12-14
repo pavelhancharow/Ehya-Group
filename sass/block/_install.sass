@@ -1,0 +1,93 @@
+.install
+  padding: 72px 0 178px
+  &-wrapper
+    max-width: 750px
+    margin: 0 auto
+  &-heading
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 59px
+    &__subtitle
+      margin-bottom: 16px
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
+      letter-spacing: 2px
+      text-transform: uppercase
+      color: $green
+    &__title
+      margin-bottom: 16px
+      font-family: 'HKGrotesk-Bold'
+      font-size: 36px
+      line-height: 48px
+      letter-spacing: 0.2px
+      color: $body
+    &__description
+      font-size: 18px
+      line-height: 32px
+      text-align: center
+      color: $grey
+  &-menu
+    max-width: 612px
+    margin: 0 auto
+  &-code
+    padding: 32px 32px 28px
+    margin-bottom: 24px
+    border-radius: 16px
+    background-color: #0F1F2B
+    box-shadow: 0 15px 35px rgba(0, 0, 0,0.1)
+  &-type
+    display: flex
+    justify-content: space-between
+    margin-bottom: 38px
+    &__item
+      padding: 7px 16px 8px
+      font-weight: 600
+      font-size: 18px
+      line-height: 25px
+      color: $grey
+      background-color: #1B2A36
+      border-radius: 6px
+      transition: all .3s
+      cursor: pointer
+      &_active
+        color: inherit
+        background-color: $light
+  &-line
+    position: relative
+    height: 20px
+    overflow: hidden
+    &__item
+      position: absolute
+      top: 50%
+      left: 100%
+      width: 100%
+      font-family: 'SFMono-Medium'
+      font-size: 16px
+      line-height: 20px
+      color: $light
+      transform: translateY(-50%)
+      visibility: hidden
+      transition: left .3s
+      &_bold
+        font-family: 'SFMono-Semibold'
+        color: $grey
+      &_aqua
+        color: #00B8D9
+      &_active
+        visibility: visible
+        left: 0%
+  &-box
+    display: flex
+    &__item
+      display: flex
+      align-items: center
+      &:first-of-type
+        margin-right: 32px
+    &__text
+      margin-left: 12px
+      font-size: 16px
+      line-height: 22px
+      &_bold
+        font-weight: 600
