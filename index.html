@@ -252,7 +252,9 @@
         <!-- /.hero-info -->
         <div class="hero-cards">
           <div class="hero-card hero-card__first">
-            <img src="img/svg/rocket.svg" alt="icon: rocket" class="hero-card__img card-icon">
+            <svg class="hero-card__img card-icon">
+              <use xlink:href="img/svg/card-icons.svg#rocket"></use>
+            </svg>
             <div class="hero-card__info">
               <strong class="hero-card__title">Super Architecture</strong>
               <span class="hero-card__subtitle">Modular, realiable, OOP, simple fast, for scalable client-side
@@ -260,21 +262,27 @@
             </div>
           </div>
           <div class="hero-card hero-card__second">
-            <img src="img/svg/workflow.svg" alt="icon: workflow" class="hero-card__img card-icon">
+            <svg class="hero-card__img card-icon">
+              <use xlink:href="img/svg/card-icons.svg#workflow"></use>
+            </svg>
             <div class="hero-card__info">
               <strong class="hero-card__title">No Dependencies</strong>
               <span class="hero-card__subtitle">Independent of any third-party libraries or frameworks.</span>
             </div>
           </div>
           <div class="hero-card hero-card__third">
-            <img src="img/svg/opened-file.svg" alt="icon: opened-file" class="hero-card__img card-icon">
+            <svg class="hero-card__img card-icon">
+              <use xlink:href="img/svg/card-icons.svg#opened-file"></use>
+            </svg>
             <div class="hero-card__info">
               <strong class="hero-card__title">Well Documented</strong>
               <span class="hero-card__subtitle">Each component and module has descriptions and API.</span>
             </div>
           </div>
           <div class="hero-card hero-card__fourth">
-            <img src="img/svg/like.svg" alt="icon: like" class="hero-card__img card-icon">
+            <svg class="hero-card__img card-icon">
+              <use xlink:href="img/svg/card-icons.svg#like"></use>
+            </svg>
             <div class="hero-card__info">
               <strong class="hero-card__title">Real Life Tested</strong>
               <span class="hero-card__subtitle">We use it in our work. On this site too for the front and admin.</span>
@@ -294,6 +302,65 @@
     <!-- /.container -->
   </section>
   <!-- /.hero -->
+  <section class="install">
+    <div class="container">
+      <div class="install-wrapper">
+        <div class="install-heading">
+          <span class="install-heading__subtitle">Quickstart</span>
+          <h2 class="install-heading__title">Awesome isn't it? Let's dive in!</h2>
+          <span class="install-heading__description">Install packages with npm or other methods. Package will be
+            installed to components/ directory and ready to use for your project.</span>
+        </div>
+        <!-- /.install-heading -->
+        <div class="install-menu">
+          <div class="install-code">
+            <div class="install-scroll">
+              <div class="install-type">
+                <span class="install-type__item">npm</span>
+                <span class="install-type__item">bower</span>
+                <span class="install-type__item">Yarn</span>
+                <span class="install-type__item">NuGet</span>
+                <span class="install-type__item">spm</span>
+                <span class="install-type__item">meteor</span>
+              </div>
+              <!-- /.install-type -->
+            </div>
+            <!-- /.install-scroll -->
+            <div class="install-line"></div>
+          </div>
+          <!-- /.install-code -->
+          <div class="install-box">
+            <div class="install-box__item">
+              <span class="oval oval-light">
+                <svg class="oval-img oval-img__dark">
+                  <use xlink:href="img/svg/done.svg#done"></use>
+                </svg>
+              </span>
+              <span class="install-box__text">
+                Requires <span class="install-box__text_bold">node, npm</span> and <span
+                  class="install-box__text_bold">git</span>
+              </span>
+            </div>
+            <div class="install-box__item">
+              <span class="oval oval-light">
+                <svg class="oval-img oval-img__dark">
+                  <use xlink:href="img/svg/done.svg#done"></use>
+                </svg>
+              </span>
+              <span class="install-box__text">
+                Latest release <span class="install-box__text_bold">v1.8.9</span>
+              </span>
+            </div>
+          </div>
+          <!-- /.install-box -->
+        </div>
+        <!-- /.install-menu -->
+      </div>
+      <!-- /.install-wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.install -->
   <div class="modal">
     <div class="modal-content">
       <svg class="modal-close" data-close>
