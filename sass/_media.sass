@@ -93,7 +93,7 @@
   .menu
     display: block
   .hero
-    padding-top: 107px
+    padding: 107px 0 48px
     &::before
       height: 701px
       background-position: 29%
@@ -122,6 +122,18 @@
         height: 258px
     &-explore
       display: none
+  .install
+    padding-top: 48px
+    &-wrapper
+      max-width: 640px
+    &-heading
+      margin-bottom: 45px
+      &__subtitle
+        margin-bottom: 20px
+      &__title
+        margin-bottom: 20px
+        font-size: 32px
+        line-height: 40px
 @media (max-width: 767px)
   .container
     max-width: 540px
@@ -131,7 +143,7 @@
   .hero
     padding-top: 90px
     &::after
-      top: 43%
+      top: 44%
     &-info
       margin-bottom: 50px
       &__title
@@ -172,6 +184,20 @@
       padding: 13px 22px 13px 24px
       font-size: 16px
       line-height: 22px
+  .install
+    &-heading
+      &__title
+        font-size: 30px
+        line-height: 38px
+      &__description
+        max-width: 90%
+    &-code
+      padding: 28px
+    &-type
+      &__item
+        padding: 7px 14px 8px
+        font-size: 16px
+        line-height: 20px
 @media (max-width: 576px)
   .container
     max-width: 94%
@@ -189,11 +215,33 @@
         line-height: 42px
       &__subtitle
         max-width: 80%
+  .install
+    &-heading
+      margin-bottom: 36px
   .modal
     padding: 59px 0 48px
     &-content
       padding: 38px 44px 36px
+@media (max-width: 545px)
+  .install
+    &-code
+      padding: 24px
+      &__item
+        padding: 7px 12px 8px
 @media (max-width: 530px)
+  .install
+    &-scroll
+      height: 35px
+      margin-bottom: 28px
+      overflow: hidden
+    &-type
+      justify-content: start
+      margin-bottom: 0
+      padding-bottom: 28px
+      overflow-x: scroll
+      &__item
+        &:not(:last-of-type)
+          margin-right: 10px
   .modal
     padding: 59px 0 48px
     &-content
@@ -240,13 +288,50 @@
         align-items: center
       &__subtitle
         text-align: center
+  .install
+    &-code
+      margin-bottom: 23px
+    &-box
+      flex-wrap: wrap
+      justify-content: center
+      width: 90%
+      &__item
+        &:first-of-type
+          margin-bottom: 17px
+          margin-right: 0
+      &__text
+        color: $grey
+        &_bold
+          font-weight: inherit
 @media (max-width: 480px)
   .modal
     &-content
       width: 90%
+@media (max-width: 445px)
+  .install
+    &-heading
+      &__title
+        font-size: 28px
+        line-height: 36px
+      &__description
+        max-width: 100%
+        font-size: 16px
+        line-height: 28px
+    &-scroll
+      margin-bottom: 24px
+    &-type
+      padding-bottom: 24px
+      &__item
+        padding: 6px 12px
+        font-size: 14px
+    &-line__item
+      font-size: 14px
+      .install
+    &-box
+      width: 100%
 @media (max-width: 425px)
   .hero
-    padding-top: 40px
+    padding: 40px 0
     &::after
       top: 32%
     &-wrapper
@@ -278,6 +363,12 @@
       &__item
         &:last-of-type
           margin-bottom: 20px
+  .install
+    padding-top: 40px
+    &-heading
+      &__title
+        max-width: 60%
+        text-align: center
   .modal
     &-content
       width: 85%
@@ -345,6 +436,10 @@
       &__subtitle
         font-size: 16px
         line-height: 28px
+  .install
+    &-heading
+      &__title
+        max-width: 85%
   .modal
     padding: 49px 0 38px
     &-content
@@ -366,3 +461,25 @@
           width: 10%
     &-description
       font-size: 12px
+@media (max-width: 320px)
+  .install
+    padding-top: 40px
+    &-heading
+      margin-bottom: 33px
+      &__subtitle
+        margin-bottom: 16px
+      &__title
+        margin-bottom: 16px
+      &__description
+        max-width: 98%
+    &-code
+      padding: 24px 15px
+      margin-bottom: 20px
+    &-scroll
+      height: 32px
+    &-type
+      &__item:not(:last-of-type)
+        margin-right: 8px
+    &-box
+      &__text
+        font-size: 14px
