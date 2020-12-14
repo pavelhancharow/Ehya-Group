@@ -85,6 +85,24 @@ body
     transition: all .3s
 .card
   &-icon
-    width: 40px
+    width: 60px
     height: 40px
     border: 1px dashed #e5eaf4
+.oval
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 24px
+  width: 24px
+  border-radius: 50%
+  &-light
+    background-color: rgba(54, 179, 126, 0.15)
+  &-dark
+    background-color: $green
+  &-img
+    width: 10px
+    height: 7.46px
+    &__light
+      fill: $light
+    &__dark
+      fill: $green
