@@ -43,11 +43,11 @@
         color: $body
       &:hover > svg
         fill: $body
-    &-explore
-      &:hover
-        color: $body
-      &:hover > svg
-        fill: $body
+  .link
+    &:hover
+      color: $body
+    &:hover > svg
+      fill: $body
 @media (max-width: 1340px)
   .dropdown
     &-list
@@ -70,6 +70,22 @@
   .hero
     &-cards
       grid-column: 1 / 13
+  .information
+    width: 908px
+  .features
+    &-item
+      &:nth-of-type(1)
+        grid-column: 1 / 7
+      &:nth-of-type(2)
+        grid-column: 7 / 13
+      &:nth-of-type(3)
+        grid-column: 1 / 7
+      &:nth-of-type(4)
+        grid-column: 7 / 13
+      &:nth-of-type(5)
+        grid-column: 1 / 7
+      &:nth-of-type(6)
+        grid-column: 7 / 13
 @media (max-width: 1080px)
   .services
     &-responsive
@@ -97,8 +113,8 @@
     &::before
       height: 701px
       background-position: 29%
-    &::after
-      top: 51%
+    &-wave
+      top: 55%
     &-wrapper
       margin-bottom: 0
     &-info
@@ -123,7 +139,7 @@
     &-explore
       display: none
   .install
-    padding-top: 48px
+    padding: 48px 0 150px
     &-wrapper
       max-width: 640px
     &-heading
@@ -132,8 +148,70 @@
         margin-bottom: 20px
       &__title
         margin-bottom: 20px
-        font-size: 32px
-        line-height: 40px
+  .title
+    font-size: 32px
+    line-height: 40px
+  .information
+    width: 672px
+    margin-bottom: 82px
+    &-about
+      margin-bottom: 54px
+      &__title
+        margin-bottom: 20px
+    &-table
+      flex-direction: column
+    &-card
+      flex: 0 1 auto
+      padding: 40px 0 37.5px
+      &:not(:last-of-type)
+        border-right: none
+        border-bottom: 1px solid rgba(229, 234, 244, 0.5)
+      &:last-of-type
+        padding-bottom: 38px
+      &__info
+        margin-bottom: 6.6px
+  .features
+    padding-top: 78px
+    &-wave
+      top: -3%
+    &-heading
+      margin-bottom: 54px
+      &__subtitle
+        margin-bottom: 20px
+      &__title
+        margin-bottom: 20px
+      &__description
+        width: 85%
+    &-container
+      grid-gap: 16px
+      max-width: 672px
+      margin: 0 auto
+    &-item
+      align-items: center
+      padding: 32px 56px 35px
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
+      &__img
+        margin-bottom: 24px
+        border: none
+      &__title
+        margin-bottom: 5px
+        font-family: 'HKGrotesk-Bold'
+        font-size: 24px
+      &__description
+        text-align: center
+        margin-bottom: 23px
+      &:nth-of-type(1)
+        grid-column: 1 / 13
+      &:nth-of-type(2)
+        grid-column: 1 / 13
+      &:nth-of-type(3)
+        grid-column: 1 / 13
+      &:nth-of-type(4)
+        grid-column: 1 / 13
+      &:nth-of-type(5)
+        grid-column: 1 / 13
+      &:nth-of-type(6)
+        grid-column: 1 / 13
 @media (max-width: 767px)
   .container
     max-width: 540px
@@ -142,8 +220,8 @@
       padding: 0
   .hero
     padding-top: 90px
-    &::after
-      top: 44%
+    &-wave
+      top: 51%
     &-info
       margin-bottom: 50px
       &__title
@@ -186,9 +264,6 @@
       line-height: 22px
   .install
     &-heading
-      &__title
-        font-size: 30px
-        line-height: 38px
       &__description
         max-width: 90%
     &-code
@@ -198,6 +273,12 @@
         padding: 7px 14px 8px
         font-size: 16px
         line-height: 20px
+  .title
+    font-size: 30px
+    line-height: 38px
+  .information
+    width: 492px
+    margin-bottom: 88px
 @media (max-width: 576px)
   .container
     max-width: 94%
@@ -206,8 +287,8 @@
     padding-top: 70px
     &::before
       height: 602px
-    &::after
-      top: 38%
+    &-wave
+      top: 42%
     &-info
       &__title
         max-width: 92%
@@ -222,12 +303,23 @@
     padding: 59px 0 48px
     &-content
       padding: 38px 44px 36px
+  .information
+    width: inherit
 @media (max-width: 545px)
   .install
     &-code
       padding: 24px
       &__item
         padding: 7px 12px 8px
+  .features
+    &-heading
+      margin-bottom: 47px
+      &__title
+        width: 73%
+      &__description
+        width: 90%
+    &-item
+      padding: 35px 24px 32px
 @media (max-width: 530px)
   .install
     &-scroll
@@ -259,7 +351,7 @@
           width: 25%
 @media (max-width: 500px)
   .hero
-    &::after
+    &-wave
       top: 33%
     &-info
       &__title,
@@ -304,19 +396,18 @@
         &_bold
           font-weight: inherit
 @media (max-width: 480px)
+  .information
+    &-about
+      &__title
+        max-width: 80%
   .modal
     &-content
       width: 90%
 @media (max-width: 445px)
   .install
     &-heading
-      &__title
-        font-size: 28px
-        line-height: 36px
       &__description
         max-width: 100%
-        font-size: 16px
-        line-height: 28px
     &-scroll
       margin-bottom: 24px
     &-type
@@ -329,10 +420,16 @@
       .install
     &-box
       width: 100%
+  .title
+    font-size: 28px
+    line-height: 36px
+  .description
+    font-size: 16px
+    line-height: 28px
 @media (max-width: 425px)
   .hero
     padding: 40px 0
-    &::after
+    &-wave
       top: 32%
     &-wrapper
       margin-bottom: 24px
@@ -350,8 +447,9 @@
       line-height: 24px
     &-explore
       display: flex
-      font-size: 16px
-      line-height: 22px
+  .link
+    font-size: 16px
+    line-height: 22px
   .menu
     &-list
       position: fixed
@@ -364,11 +462,53 @@
         &:last-of-type
           margin-bottom: 20px
   .install
-    padding-top: 40px
+    padding: 40px 0 86px
     &-heading
       &__title
         max-width: 60%
-        text-align: center
+  .information
+    margin-bottom: 80px
+    &-about
+      margin-bottom: 36px
+      &__title
+        max-width: 85%
+        margin-bottom: 16px
+    &-card
+      padding: 40px 0 27px
+      &__info
+        margin-bottom: 1.6px
+        font-size: 32px
+        line-height: 42px
+      &__text
+        font-size: 16px
+        line-height: 28px
+    &-table
+      border-top-width: 2px
+  .features
+    &-wave
+      top: -90px
+    &-heading
+      margin-bottom: 36px
+      &__subtitle
+        margin-bottom: 18px
+      &__title
+        margin-bottom: 16px
+      &__description
+        width: 100%
+    &-container
+      grid-gap: 12px
+    &-item
+      padding: 35px 10px 29px
+      &__img
+        margin-bottom: 19px
+      &__title
+        margin-bottom: 11px
+        font-size: 20px
+        line-height: 24px
+      &__description
+        margin-bottom: 20px
+        font-size: 16px
+        line-height: 28px
   .modal
     &-content
       width: 85%
@@ -404,8 +544,8 @@
     padding-top: 36px
     &::before
       height: 622px
-    &::after
-      top: 33%
+    &-wave
+      top: 35%
     &-wrapper
       margin-bottom: 20px
       grid-column-gap: 0
@@ -440,6 +580,12 @@
     &-heading
       &__title
         max-width: 85%
+  .information
+    &-about
+      &__title
+        max-width: 100%
+  .features-heading__title
+    width: 100%
   .modal
     padding: 49px 0 38px
     &-content
@@ -462,6 +608,9 @@
     &-description
       font-size: 12px
 @media (max-width: 320px)
+  .hero
+    &-wave
+      top: 34%
   .install
     padding-top: 40px
     &-heading
