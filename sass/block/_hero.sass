@@ -2,6 +2,7 @@
   position: relative
   padding-top: 96px
   padding-bottom: 70px
+  overflow: hidden
   &::before
     content: ""
     position: absolute
@@ -15,18 +16,11 @@
     width: 100%
     height: 602px
     z-index: -1
-  &::after
-    content: ""
+  &-wave
     position: absolute
     top: 53%
     left: 0
     right: 0
-    width: 100%
-    height: 175px
-    background-image: url('../img/svg/wave.svg')
-    background-repeat: no-repeat
-    background-position: center
-    z-index: -1
   &-wrapper
     display: grid
     grid-template-columns: repeat(12, 1fr)
@@ -104,13 +98,6 @@
       line-height: 32px
       color: $grey
   &-explore
-    display: flex
-    align-items: center
     justify-content: center
-    font-weight: 700
-    font-size: 18px
-    line-height: 25px
-    color: $blue
-    transition: all .3s
     &__img
       margin-left: 15px
