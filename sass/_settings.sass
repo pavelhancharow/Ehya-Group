@@ -72,6 +72,14 @@ body
     border-radius: 2000px
     color: $light
     transition: all .3s
+.link
+  display: flex
+  align-items: center
+  font-weight: 700
+  font-size: 18px
+  line-height: 25px
+  color: $blue
+  transition: all .3s
 .arrow
   &-right
     width: 14px
@@ -106,3 +114,31 @@ body
       fill: $light
     &__dark
       fill: $green
+.wave
+  &-container
+    width: 100%
+    height: 175px
+    z-index: -1
+  &-param
+    width: inherit
+    height: inherit
+    fill: #ffffff
+.title
+  font-family: 'HKGrotesk-Bold'
+  font-size: 36px
+  line-height: 48px
+  letter-spacing: 0.2px
+  text-align: center
+  color: $body
+.paragraph
+  font-weight: 600
+  font-size: 14px
+  line-height: 19px
+  letter-spacing: 2px
+  text-transform: uppercase
+  color: $green
+.description
+  font-size: 18px
+  line-height: 32px
+  text-align: center
+  color: $grey
