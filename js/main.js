@@ -307,4 +307,104 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   tabs();
+
+  const cards = () => {
+    class MenuCard {
+      constructor(src, title, description, link, linkSrc, parentSelector, ...classes) {
+        this.src = src;
+        this.title = title;
+        this.description = description;
+        this.link = link;
+        this.linkSrc = linkSrc;
+        this.parent = document.querySelector(parentSelector);
+        this.classes = classes;
+      }
+
+      render() {
+        const elem = document.createElement('div');
+
+        if (this.classes.length === 0) {
+          this.classes = 'features-item';
+          elem.classList.add(this.classes);
+        } else {
+          this.classes.forEach((className, i) => {
+            elem.classList.add(className);
+          });
+        }
+
+        elem.innerHTML = `
+            <svg class="features-item__img card-icon">
+              <use xlink:href=${this.src}></use>
+            </svg>
+            <span class="features-item__title">${this.title}</span>
+            <span class="features-item__description">${this.description}</span>
+            <a href="#" class="features-item__link link">
+              ${this.link}
+              <svg class="features-item__link_img arrow-more">
+                <use xlink:href=${this.linkSrc}></use>
+              </svg>
+            </a>
+        `;
+
+        this.parent.append(elem);
+      }
+    }
+
+    new MenuCard(
+      "img/svg/card-icons.svg#like",
+      "Simple usage",
+      "Our library makes things simple like never before, by preferring code over configuration.",
+      "Learn more",
+      "img/svg/pointers.svg#arrow-right",
+      ".features-container"
+    ).render();
+
+    new MenuCard(
+      "img/svg/card-icons.svg#substract",
+      "Efficient builds",
+      "Using the power of node streams, first gives you fast builds that don't write intermediary.",
+      "Learn more",
+      "img/svg/pointers.svg#arrow-right",
+      ".features-container"
+    ).render();
+
+    new MenuCard(
+      "img/svg/card-icons.svg#application",
+      "Flexible library",
+      "Our library is designed to be agnostic about your setup and style of coding.",
+      "Learn more",
+      "img/svg/pointers.svg#arrow-right",
+      ".features-container"
+    ).render();
+
+    new MenuCard(
+      "img/svg/card-icons.svg#syntax",
+      "Friendly Syntax",
+      "Our library starts from the same syntax that millions of JavaScript developers know today",
+      "Learn more",
+      "img/svg/pointers.svg#arrow-right",
+      ".features-container"
+    ).render();
+
+    new MenuCard(
+      "img/svg/card-icons.svg#workflow",
+      "Suit for large apps",
+      "Using the power of node streams, first gives you fast builds that don't write intermediary.",
+      "Learn more",
+      "img/svg/pointers.svg#arrow-right",
+      ".features-container"
+    ).render();
+
+    new MenuCard(
+      "img/svg/card-icons.svg#multiple-shape",
+      "State of the art JavaScript",
+      "Our library offers support for the latest and evolving JavaScript features.",
+      "Learn more",
+      "img/svg/pointers.svg#arrow-right",
+      ".features-container"
+    ).render();
+
+  };
+
+  cards();
 });
