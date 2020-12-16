@@ -1,0 +1,78 @@
+{
+  "heroCards": [
+    {
+      "img": "img/svg/card-icons.svg#rocket",
+      "title": "Super Architecture",
+      "descr": "Modular, realiable, OOP, simple fast, for scalable client-side code."
+    },
+    {
+      "img": "img/svg/card-icons.svg#workflow",
+      "title": "No Dependencies",
+      "descr": "Independent of any third-party libraries or frameworks."
+    },
+    {
+      "img": "img/svg/card-icons.svg#opened-file",
+      "title": "Well Documented",
+      "descr": "Each component and module has descriptions and API."
+    },
+    {
+      "img": "img/svg/card-icons.svg#like",
+      "title": "Real Life Tested",
+      "descr": "We use it in our work. On this site too for the front and admin."
+    }
+  ],
+  "informationCards": [
+    {
+      "img": "img/svg/info-sprites.svg#rating",
+      "title": "4.98/5",
+      "descr": "Average ratings"
+    },
+    {
+      "img": "img/svg/info-sprites.svg#install",
+      "title": "360k+",
+      "descr": "Monthly Installs"
+    },
+    {
+      "img": "img/svg/info-sprites.svg#download",
+      "title": "70k+",
+      "descr": "Weekly Downloads"
+    },
+    {
+      "img": "img/svg/info-sprites.svg#fire",
+      "title": "6.4M",
+      "descr": "Total Downloads"
+    }
+  ],
+  "featuresCards": [
+    {
+      "img": "img/svg/card-icons.svg#like",
+      "title": "Simple usage",
+      "descr": "Our library makes things simple like never before, by preferring code over configuration."
+    },
+    {
+      "img": "img/svg/card-icons.svg#substract",
+      "title": "Efficient builds",
+      "descr": "Using the power of node streams, first gives you fast builds that don't write intermediary."
+    },
+    {
+      "img": "img/svg/card-icons.svg#application",
+      "title": "Flexible library",
+      "descr": "Our library is designed to be agnostic about your setup and style of coding."
+    },
+    {
+      "img": "img/svg/card-icons.svg#syntax",
+      "title": "Friendly Syntax",
+      "descr": "Our library starts from the same syntax that millions of JavaScript developers know today"
+    },
+    {
+      "img": "img/svg/card-icons.svg#workflow",
+      "title": "Suit for large apps",
+      "descr": "Using the power of node streams, first gives you fast builds that don't write intermediary."
+    },
+    {
+      "img": "img/svg/card-icons.svg#multiple-shape",
+      "title": "State of the art JavaScript",
+      "descr": "Our library offers support for the latest and evolving JavaScript features."
+    }
+  ]
+}
