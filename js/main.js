@@ -579,9 +579,11 @@ window.addEventListener('DOMContentLoaded', () => {
           if (xDiff > 0) {
             /* left swipe */
             nextSlide();
+            stopSlide();
           } else {
             /* right swipe */
             prevSlide();
+            stopSlide();
           }
         }
         /* reset values */
@@ -606,9 +608,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
       startSlide();
     };
-
-
-
 
     resizeScreen();
     window.addEventListener('resize', () => resizeScreen());
