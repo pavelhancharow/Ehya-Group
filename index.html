@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ehya Home</title>
   <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="preload" as="fonts"
+  <link as="style" rel="stylesheet preload prefetch"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-    crossorigin>
+    type="text/css" crossorigin="anonymous" />
   <link rel="preload" as="style" href="css/style.css" onload="this.rel='stylesheet'">
   <script src="js/main.js" defer></script>
 </head>
@@ -607,6 +607,84 @@
     <!-- /.container -->
   </section>
   <!-- /.cta -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-block">
+          <div class="footer-socials">
+            <img src="img/svg/logo.svg" alt="icon: logo" class="footer-socials__logo">
+            <span class="footer-socials__text">Build a modern and creative website with crealand</span>
+            <div class="footer-socials__icons">
+              <a href="#" class="footer-socials__icon">
+                <svg class="footer-socials__icon_img">
+                  <use xlink:href="img/svg/socials.svg#google"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer-socials__icon">
+                <svg class="footer-socials__icon_img">
+                  <use xlink:href="img/svg/socials.svg#twitter"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer-socials__icon">
+                <svg class="footer-socials__icon_img">
+                  <use xlink:href="img/svg/socials.svg#instagram"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer-socials__icon">
+                <svg class="footer-socials__icon_img">
+                  <use xlink:href="img/svg/socials.svg#linked"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <nav class="footer-nav__item">
+              <b class="footer-nav__title">Product</b>
+              <a href="#" class="footer-nav__link">Landingpage</a>
+              <a href="#" class="footer-nav__link">Features</a>
+              <a href="#" class="footer-nav__link">Documentation</a>
+              <a href="#" class="footer-nav__link">Referral Program</a>
+              <a href="#" class="footer-nav__link">Pricing</a>
+            </nav>
+            <nav class="footer-nav__item">
+              <b class="footer-nav__title">Services</b>
+              <a href="#" class="footer-nav__link">Documentation</a>
+              <a href="#" class="footer-nav__link">Design</a>
+              <a href="#" class="footer-nav__link">Themes</a>
+              <a href="#" class="footer-nav__link">Illustrations</a>
+              <a href="#" class="footer-nav__link">UI Kit</a>
+            </nav>
+            <nav class="footer-nav__item">
+              <b class="footer-nav__title">Company</b>
+              <a href="#" class="footer-nav__link">About</a>
+              <a href="#" class="footer-nav__link">Terms</a>
+              <a href="#" class="footer-nav__link">Privacy Policy</a>
+              <a href="#" class="footer-nav__link">Careers</a>
+            </nav>
+            <nav class="footer-nav__item">
+              <b class="footer-nav__title">More</b>
+              <a href="#" class="footer-nav__link">Documentation</a>
+              <a href="#" class="footer-nav__link">License</a>
+              <a href="#" class="footer-nav__link">Changelog</a>
+            </nav>
+          </div>
+          <!-- /.footer-nav -->
+        </div>
+        <!-- /.footer-block -->
+        <div class="footer-copyright">
+          <span class="footer-copyright__oval">
+            <svg class="footer-copyright__img">
+              <use xlink:href="img/svg/info-sprites.svg#heart-solid"></use>
+            </svg>
+          </span>
+          <span class="footer-copyright__text">Copyright &copy; 2019. Crafted with love.</span>
+        </div>
+        <!-- /.footer-copyright -->
+      </div>
+      <!-- /.footer-wrapper -->
+    </div>
+    <!-- /.container -->
+  </footer>
   <div class="modal">
     <div class="modal-content">
       <svg class="modal-close" data-close>
@@ -616,7 +694,9 @@
         <h3 class="modal-singUp__title">Let’s join us</h3>
         <a href="#" class="modal-singUp__btn">
           <div class="modal-singUp__icon">
-            <img src="img/svg/bitmap.svg" alt="icon: google" class="modal-singUp__icon_g">
+            <svg class="modal-singUp__icon_g">
+              <use xlink:href="img/svg/socials.svg#google-logo"></use>
+            </svg>
           </div>
           <span class="modal-singUp__text">Sign up with Google</span>
         </a>
