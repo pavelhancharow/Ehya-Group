@@ -895,9 +895,8 @@ body {
 }
 
 .hero-explore {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 205px;
+  margin: 0 auto;
 }
 
 .hero-explore__img {
@@ -1740,14 +1739,6 @@ body {
   margin-left: 16px;
 }
 
-.cta-git {
-  color: #183B56;
-}
-
-.cta-git > svg {
-  fill: #183B56;
-}
-
 .cta-more {
   max-width: 180px;
   -ms-flex-negative: 0;
@@ -2259,10 +2250,10 @@ body {
     font-weight: 600;
     color: #1565D8;
   }
-  .hero-git:hover {
+  .button-social:hover {
     color: #183B56;
   }
-  .hero-git:hover > svg {
+  .button-social:hover > svg {
     fill: #183B56;
   }
   .link:hover {
@@ -2277,12 +2268,6 @@ body {
   }
   .button-more:hover > svg {
     fill: #183B56;
-  }
-  .cta-git:hover {
-    color: #1565D8;
-  }
-  .cta-git:hover > svg {
-    fill: #1565D8;
   }
   .footer-socials__icon:hover {
     background-color: rgba(90, 113, 132, 0.2);
