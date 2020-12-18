@@ -96,7 +96,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.modal'),
       modalForm = modal.querySelector('.modal-form'),
       closeModal = modal.querySelector('[data-close]'),
-      openModal = document.querySelector('[data-open]'),
+      openModal = document.querySelectorAll('[data-open]'),
       inputs = modalForm.querySelectorAll('[data-input]');
 
     function modalOpen(e) {
@@ -105,7 +105,8 @@ window.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = 'hidden';
     }
 
-    openModal.addEventListener('click', modalOpen);
+    openModal.forEach(openModal => openModal.addEventListener('click', modalOpen));
+
     closeModal.addEventListener('click', () => {
       modalClose(modal, inputs, modalForm);
     });
