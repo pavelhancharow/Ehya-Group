@@ -128,6 +128,7 @@ body {
 .arrow-right {
   width: 14px;
   height: 18px;
+  margin-left: 13px;
   fill: #ffffff;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -804,10 +805,6 @@ body {
           justify-content: space-between;
   width: 464px;
   margin-bottom: 16px;
-}
-
-.hero-button__img {
-  margin-left: 13px;
 }
 
 .hero-description {
@@ -1709,6 +1706,54 @@ body {
           transform: rotate(0deg);
 }
 
+.cta {
+  padding-top: 120px;
+  padding-bottom: 122px;
+  background: center/cover no-repeat url(../img/bg/header-bg.png);
+}
+
+.cta-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cta-title {
+  max-width: 40%;
+  text-align: left;
+  color: #ffffff;
+}
+
+.cta-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cta-link:last-of-type {
+  margin-left: 16px;
+}
+
+.cta-git {
+  color: #183B56;
+}
+
+.cta-git > svg {
+  fill: #183B56;
+}
+
+.cta-more {
+  max-width: 180px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -2076,6 +2121,12 @@ body {
   }
   .button-more:hover > svg {
     fill: #183B56;
+  }
+  .cta-git:hover {
+    color: #1565D8;
+  }
+  .cta-git:hover > svg {
+    fill: #1565D8;
   }
 }
 
@@ -2452,6 +2503,24 @@ body {
   .testimonials-item__comment {
     margin-bottom: 40px;
   }
+  .cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .cta-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .cta-title {
+    max-width: 60%;
+    margin-bottom: 44px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2684,6 +2753,9 @@ body {
   }
   .install-type__item:not(:last-of-type) {
     margin-right: 10px;
+  }
+  .cta-title {
+    max-width: 80%;
   }
   .modal {
     padding: 59px 0 48px;
@@ -3027,6 +3099,29 @@ body {
   .sponsors-info__title {
     margin-bottom: 20px;
   }
+  .cta-title {
+    max-width: 90%;
+    margin-bottom: 40px;
+  }
+  .cta-buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cta-link:first-of-type {
+    margin-bottom: 12px;
+  }
+  .cta-link:last-of-type {
+    margin-left: 0;
+    padding: 13px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .modal-content {
     width: 85%;
     font-size: 14px;
@@ -3175,6 +3270,12 @@ body {
   }
   .features-heading__title {
     width: 100%;
+  }
+  .testimonials-wave {
+    top: -5%;
+  }
+  .cta-title {
+    max-width: 100%;
   }
   .modal {
     padding: 49px 0 38px;
