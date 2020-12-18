@@ -54,6 +54,17 @@
         color: $blue
       &:hover > svg
         fill: $blue
+  .footer
+    &-socials
+      &__icon
+        &:hover
+          background-color: rgba(90, 113, 132, 0.2)
+        &:hover > svg
+          fill: $blue
+    &-nav
+      &__link
+        &:hover
+          color: $blue
 @media (max-width: 1340px)
   .dropdown
     &-list
@@ -95,6 +106,11 @@
   .faq
     &-cards
       max-width: 438px
+  .footer
+    &-nav
+      &__item
+        &:not(:last-of-type)
+          margin-right: 60px
 @media (max-width: 1080px)
   .services
     &-responsive
@@ -301,6 +317,29 @@
       max-width: 60%
       margin-bottom: 44px
       text-align: center
+      font-size: 36px
+      line-height: 48px
+  .footer
+    padding-top: 62px
+    padding-bottom: 64px
+    &-block
+      padding-left: 35px
+      margin-bottom: 63px
+    &-socials
+      min-width: 253px
+      &__text
+        margin-bottom: 29px
+    &-nav
+      flex-wrap: wrap
+      &__item
+        min-width: 165px
+        &:not(:last-of-type)
+          margin-right: 0px
+        &:nth-of-type(odd)
+          margin-right: 30px
+        &:nth-of-type(1),
+        &:nth-of-type(2)
+          margin-bottom: 47px
 @media (max-width: 767px)
   .container
     max-width: 540px
@@ -381,6 +420,20 @@
           margin-bottom: 21px
     &-item
       max-width: 100%
+  .cta-title
+    font-size: 32px
+    line-height: 40px
+  .footer
+    &-block
+      padding-left: 0
+    &-socials
+      margin-right: 0
+      min-width: 243px
+    &-nav
+      &__item
+        min-width: 135px
+        &:nth-of-type(odd)
+          margin-right: 20px
 @media (max-width: 576px)
   .container
     max-width: 94%
@@ -435,6 +488,25 @@
         margin-bottom: 40px
         font-size: 32px
         line-height: 48px
+  .footer
+    &-block
+      flex-wrap: wrap
+      width: 65%
+      margin: 0 auto
+    &-socials
+      align-items: center
+      min-width: 0
+      max-width: 100%
+      order: 1
+      margin-bottom: 30px
+      &__text
+        text-align: center
+    &-nav
+      justify-content: space-between
+      margin-bottom: 47px
+      &__item
+        &:nth-of-type(odd)
+          margin-right: 0px
 @media (max-width: 545px)
   .install
     &-code
@@ -576,6 +648,8 @@
             transform: translateX(0)
           &:nth-of-type(5)
             transform: translateX(0)
+  .footer-block
+    width: 75%
 @media (max-width: 480px)
   .information
     &-about
@@ -695,13 +769,13 @@
         font-size: 16px
         line-height: 28px
   .sponsors
-    padding-top: 121px
-    // вернуть на 40px в самом конце!!!!!!!!!!!!!!!!!!!!!
+    padding-top: 81px
     &-info
       margin-bottom: 48px
       &__title
         margin-bottom: 20px
   .cta
+    padding-bottom: 76px
     &-title
       max-width: 90%
       margin-bottom: 40px
@@ -715,28 +789,6 @@
         padding: 13px 0
         display: flex
         justify-content: center
-  .modal
-    &-content
-      width: 85%
-      font-size: 14px
-    &-singUp
-      &__title
-        font-size: 32px
-        line-height: 44px
-      &__description
-        &::before
-          left: -25%
-          width: 20%
-        &::after
-          right: -25%
-          width: 20%
-    &-form
-      &__input
-        font-size: 14px
-        &::placeholder
-          font-size: 14px
-      &__submit
-        font-size: 16px
   .faq
     margin-bottom: 87px
     &-block
@@ -772,6 +824,53 @@
         line-height: 44px
         text-align: center
         letter-spacing: 1px
+  .footer
+    padding: 48px 0
+    &-block
+      width: 80%
+    &-socials
+      margin-bottom: 0
+      &__logo
+        margin-bottom: 12px
+      &__text
+        width: 90%
+        margin-bottom: 24px
+    &-nav
+      margin-bottom: 45px
+      &__item
+        min-width: 128px
+        &:nth-of-type(1),
+        &:nth-of-type(2)
+          margin-bottom: 39px
+      &__title
+        margin-bottom: 20px
+      &__link
+        &:not(:last-of-type)
+          margin-bottom: 15px
+    &-copyright
+      display: none
+  .modal
+    &-content
+      width: 85%
+      font-size: 14px
+    &-singUp
+      &__title
+        font-size: 32px
+        line-height: 44px
+      &__description
+        &::before
+          left: -25%
+          width: 20%
+        &::after
+          right: -25%
+          width: 20%
+    &-form
+      &__input
+        font-size: 14px
+        &::placeholder
+          font-size: 14px
+      &__submit
+        font-size: 16px
 @media (max-width: 375px)
   body
     padding-top: 64px
@@ -852,6 +951,9 @@
           width: 10%
     &-description
       font-size: 12px
+  .footer
+    &-block
+      width: 99%
 @media (max-width: 320px)
   .hero
     &-wave
@@ -877,3 +979,17 @@
     &-box
       &__text
         font-size: 14px
+  .footer
+    &-block
+      width: 99%
+    &-socials
+      &__text
+        font-size: 14px
+        line-height: 24px
+    &-nav
+      &__title
+        font-size: 16px
+        line-height: 22px
+      &__link
+        font-size: 14px
+        line-height: 20px
