@@ -48,6 +48,12 @@
       color: $body
     &:hover > svg
       fill: $body
+  .cta
+    &-git
+      &:hover
+        color: $blue
+      &:hover > svg
+        fill: $blue
 @media (max-width: 1340px)
   .dropdown
     &-list
@@ -285,6 +291,16 @@
     &-item
       &__comment
         margin-bottom: 40px
+  .cta
+    padding-top: 80px
+    padding-bottom: 80px
+    &-wrapper
+      flex-direction: column
+      justify-content: start
+    &-title
+      max-width: 60%
+      margin-bottom: 44px
+      text-align: center
 @media (max-width: 767px)
   .container
     max-width: 540px
@@ -448,6 +464,9 @@
       &__item
         &:not(:last-of-type)
           margin-right: 10px
+  .cta
+    &-title
+      max-width: 80%
   .modal
     padding: 59px 0 48px
     &-content
@@ -682,6 +701,20 @@
       margin-bottom: 48px
       &__title
         margin-bottom: 20px
+  .cta
+    &-title
+      max-width: 90%
+      margin-bottom: 40px
+    &-buttons
+      flex-direction: column
+    &-link
+      &:first-of-type
+        margin-bottom: 12px
+      &:last-of-type
+        margin-left: 0
+        padding: 13px 0
+        display: flex
+        justify-content: center
   .modal
     &-content
       width: 85%
@@ -794,6 +827,10 @@
         max-width: 100%
   .features-heading__title
     width: 100%
+  .testimonials-wave
+    top: -5%
+  .cta-title
+    max-width: 100%
   .modal
     padding: 49px 0 38px
     &-content
